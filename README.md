@@ -75,8 +75,6 @@ dependencies {
 }
 ```
 
-> Note: This is a local/library module project. For distribution, publish via JitPack or Maven.
-
 ---
 
 ## 🚀 Usage
