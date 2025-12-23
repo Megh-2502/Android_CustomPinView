@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:overScrollMode="never"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="PinView Library Examples"
+            android:textColor="#212121"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="Production-ready PIN/OTP input component"
+            android:textColor="#757575"
+            android:textSize="14sp" />
+
+        <!-- ========== EXAMPLE 1: APP LOCK (4-digit, BOX, Masked) ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Example 1: App Lock PIN"
+                    android:textColor="#1976D2"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="4-digit • Box style • Masked • Error shake"
+                    android:textColor="#757575"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Correct PIN: 1234"
+                    android:textColor="#4CAF50"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <!-- PinView 1: App Lock -->
+                <com.ext.custom_pin_view.PinView
+                    android:id="@+id/pinViewAppLock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    app:animationEnabled="true"
+                    app:autoSubmit="false"
+                    app:borderWidth="2dp"
+                    app:boxBackgroundColor="#FFFFFF"
+                    app:boxHeight="50dp"
+                    app:boxSpacing="12dp"
+                    app:boxWidth="50dp"
+                    app:clearOnError="false"
+                    app:cornerRadius="12dp"
+                    app:cursorColor="#2196F3"
+                    app:cursorVisible="true"
+                    app:errorBorderColor="#F44336"
+                    app:errorShakeEnabled="true"
+                    app:filledBorderColor="#4CAF50"
+                    app:focusedBorderColor="#2196F3"
+                    app:maskCharacter="●"
+                    app:maskDelay="300"
+                    app:maskEnabled="true"
+                    app:normalBorderColor="#E0E0E0"
+                    app:pinLength="4"
+                    app:pinViewType="box"
+                    app:scaleAnimationEnabled="true"
+                    app:textColor="#212121"
+                    app:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnVerifyAppLock"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#2196F3"
+                        android:enabled="false"
+                        android:text="Verify"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnClearAppLock"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#757575"
+                        android:text="Clear"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========== EXAMPLE 2: OTP VERIFICATION (6-digit, UNDERLINE) ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Example 2: OTP Verification"
+                    android:textColor="#FF6F00"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="6-digit • Underline style • Unmasked • Auto-submit"
+                    android:textColor="#757575"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Correct OTP: 123456"
+                    android:textColor="#4CAF50"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <!-- PinView 2: OTP -->
+                <com.ext.custom_pin_view.PinView
+                    android:id="@+id/pinViewOtp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    app:animationEnabled="true"
+                    app:autoSubmit="true"
+                    app:borderWidth="3dp"
+                    app:boxBackgroundColor="#00FFFFFF"
+                    app:boxHeight="50dp"
+                    app:boxSpacing="10dp"
+                    app:boxWidth="35dp"
+                    app:cursorColor="#FF6F00"
+                    app:cursorHeight="28dp"
+                    app:cursorVisible="true"
+                    app:errorBorderColor="#D32F2F"
+                    app:errorShakeEnabled="true"
+                    app:filledBorderColor="#FFA726"
+                    app:focusedBorderColor="#FF6F00"
+                    app:maskEnabled="false"
+                    app:normalBorderColor="#BDBDBD"
+                    app:pinLength="6"
+                    app:pinViewType="underline"
+                    app:scaleAnimationEnabled="false"
+                    app:textColor="#212121"
+                    app:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnVerifyOtp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FF6F00"
+                        android:enabled="false"
+                        android:text="Verify OTP"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnClearOtp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#757575"
+                        android:text="Clear"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========== EXAMPLE 3: BANK PIN (5-digit, CIRCLE, Custom colors) ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Example 3: Banking PIN"
+                    android:textColor="#6A1B9A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="5-digit • Circle style • Masked • Custom colors"
+                    android:textColor="#757575"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Correct PIN: 98765"
+                    android:textColor="#4CAF50"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <!-- PinView 3: Bank PIN -->
+                <com.ext.custom_pin_view.PinView
+                    android:id="@+id/pinViewBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    app:animationEnabled="true"
+                    app:borderWidth="2.5dp"
+                    app:boxBackgroundColor="#F3E5F5"
+                    app:boxHeight="50dp"
+                    app:boxSpacing="14dp"
+                    app:boxWidth="40dp"
+                    app:cursorColor="#8E24AA"
+                    app:cursorVisible="true"
+                    app:errorBorderColor="#C62828"
+                    app:errorShakeEnabled="true"
+                    app:filledBorderColor="#7B1FA2"
+                    app:filledTextColor="#6A1B9A"
+                    app:focusedBorderColor="#8E24AA"
+                    app:maskCharacter="●"
+                    app:maskDelay="500"
+                    app:maskEnabled="true"
+                    app:normalBorderColor="#CE93D8"
+                    app:pinLength="5"
+                    app:pinViewType="circle"
+                    app:scaleAnimationEnabled="true"
+                    app:textColor="#4A148C"
+                    app:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnVerifyBank"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#7B1FA2"
+                        android:enabled="false"
+                        android:text="Verify PIN"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnClearBank"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#757575"
+                        android:text="Clear"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Footer Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="💡 All examples are 100% customizable via XML attributes"
+            android:textColor="#9E9E9E"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</ScrollView>
