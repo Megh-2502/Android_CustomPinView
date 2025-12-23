@@ -1,8 +1,9 @@
 # Custom PinView Library for Android
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue?logo=kotlin&logoColor=white)](https://kotlinlang.org/)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)  
-[![API](https://img.shields.io/badge/API-21%2B-orange)](#)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue?logo=kotlin&logoColor=white)](https://kotlinlang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![API](https://img.shields.io/badge/API-21%2B-orange.svg)](#)
+[![](https://jitpack.io/v/Excelsior-Technologies-Community/Android_CustomPinView.svg)](https://jitpack.io/#Excelsior-Technologies-Community/Android_CustomPinView)
 
 **Custom PinView Library** is a powerful, production-ready Android library that provides a highly customizable PIN/OTP input component. Perfect for app locks, two-factor authentication, banking apps, or any secure numeric code entry screen.
 
@@ -70,7 +71,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation 'com.github.YourUsername:CustomPinView:1.0.0' // Replace with actual repo when published
+       implementation 'com.github.Excelsior-Technologies-Community:Android_CustomPinView:1.0.0'
 }
 ```
 
